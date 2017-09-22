@@ -1,5 +1,5 @@
 ###############   
-## sevidor ssh##   
+## sevidor ssh ##   
 ###############   
 ### el archivo /etc/ssh/sshd_config   
 **Habilitar pantallas remotas  redirección X**    
@@ -26,7 +26,7 @@ Banner		--  poner mensaje de bienvenida
    
    
 ###############   
-## cliente ssh##   
+## cliente ssh ##   
 ###############   
 ### el archivo /etc/ssh/ssh_config   
 Protocol --  protocolo a usar (versión SSH)   
@@ -103,7 +103,7 @@ $ scp ca.crt client1.crt client1.key invitado@192.168.1.33:~
    
    
 ############################   
-## LLaves y conexion remota##   
+## LLaves y conexion remota ##   
 ############################   
 ### claves públicas y privadas   
 ssh_host_dsa_key — la clave privada DSA usada por sshd.   
@@ -461,9 +461,9 @@ chmod +x /etc/profile.d/os-security.sh
    
    
    
-#############################   
-## conversiones encriptacion##   
-#############################   
+###############################   
+## conversiones encriptacion ##   
+###############################   
 ###  Openssl, llaves publicas   
 **con openssl extraer la llave publica**   
 openssl rsa  -pubout 	     -in net-mon.key -out net-mon.key.pub   
