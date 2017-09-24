@@ -1,5 +1,5 @@
 ###############   
-## sevidor ssh ##   
+## sevidor ssh##   
 ###############   
 ### el archivo /etc/ssh/sshd_config   
 **Habilitar pantallas remotas  redirección X**    
@@ -26,7 +26,7 @@ Banner		--  poner mensaje de bienvenida
    
    
 ###############   
-## cliente ssh ##   
+## cliente ssh##   
 ###############   
 ### el archivo /etc/ssh/ssh_config   
 Protocol --  protocolo a usar (versión SSH)   
@@ -103,24 +103,16 @@ $ scp ca.crt client1.crt client1.key invitado@192.168.1.33:~
    
    
 ############################   
-## LLaves y conexion remota ##   
+## LLaves y conexion remota##   
 ############################   
 ### claves públicas y privadas   
-ssh_host_dsa_key — la clave privada DSA usada por sshd.   
-ssh_host_dsa_key.pub — la clave pública DSA usada por sshd.   
-ssh_host_key — la clave privada RSA usada por sshd para la versión 1 del protocolo SSH.   
-ssh_host_key.pub — la clave pública RSA usada por sshd para la versión 1 del protocolo SSH.   
-ssh_host_rsa_key — la clave privada RSA usada por sshd para la versión 2 del protocolo SSH.   
-ssh_host_rsa_key.pub — la clave pública RSA usada por sshd para la versión 2 del protocolo SSH.   
-   
 **se almacenan en:**   
-   
-ruta              descripcion   
------------------ ----------------------   
-$HOME/.ssh/id_dsa  para la clave privada    
-$HOME/.ssh/id_dsa.pub  para la clave pública.    
-   
-   
+
+| Ruta | Descripcion |
+| --- | --- |
+| $HOME/.ssh/id_dsa | para la clave privada |
+| $HOME/.ssh/id_dsa.pub | para la clave pública. |
+
    
 ### Generar par de llaves   
 ssh-keygen -t dsa   	(usado por USA)   
@@ -128,7 +120,8 @@ ssh-keygen -t rsa
 >	Enter passphrase  #en caso quiera usarse contraseña para loguearse   
    
 *otros tipos de algoritmos que podemos usar*   
-rsa, dss, ed25519, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, ecdsa-sha2-nistp521   
+rsa, dss, ed25519, ecdsa-sha2-nistp256, ecdsa-sha2-nistp384, ecdsa-sha2-nistp521    
+dsa es deprecated     
    
 ssh-keygen -t rsa -b 2048  [-f nombre_archivo]   
 _sino se pone -f entonces se genera en el archivo ~.ssh/id_rsa_   
@@ -159,10 +152,10 @@ ssh-copy-id  user@ip_del_otro_servidor
 _Para que funcione  ssh-copy-id el agente tiene que estar activo para la sesión. Si no lo has puesto que lo arranque al inicio, tendrás que arrancarlo desde la consola ejecutando ssh-add._   
    
 **otra forma usando agente_ssh , compartir llave publica (no pedir passw)**   
-_**cliente**_   
+**cliente**_   
 eval 'ssh-agent'   
 scp /home/mad/.ssh/id_rsa_mad.pub mad@192.168.1.100:/home/mad   
-**en archivo /etc/ssh/ssh_config**   
+_en archivo /etc/ssh/ssh_config_   
 ForwardAgent yes   
 _**servidor**_   
 **//darle permisos (755 al menos).**   
@@ -461,9 +454,9 @@ chmod +x /etc/profile.d/os-security.sh
    
    
    
-###############################   
-## conversiones encriptacion ##   
-###############################   
+#############################   
+## conversiones encriptacion##   
+#############################   
 ###  Openssl, llaves publicas   
 **con openssl extraer la llave publica**   
 openssl rsa  -pubout 	     -in net-mon.key -out net-mon.key.pub   
