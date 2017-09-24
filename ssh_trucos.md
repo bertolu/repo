@@ -1,5 +1,5 @@
 ###############   
-## sevidor ssh##   
+## sevidor ssh ##   
 ###############   
 ### el archivo /etc/ssh/sshd_config   
 **Habilitar pantallas remotas  redirección X**    
@@ -26,7 +26,7 @@ Banner		--  poner mensaje de bienvenida
    
    
 ###############   
-## cliente ssh##   
+## cliente ssh ##   
 ###############   
 ### el archivo /etc/ssh/ssh_config   
 Protocol --  protocolo a usar (versión SSH)   
@@ -103,7 +103,7 @@ $ scp ca.crt client1.crt client1.key invitado@192.168.1.33:~
    
    
 ############################   
-## LLaves y conexion remota##   
+## LLaves y conexion remota ##   
 ############################   
 ### claves públicas y privadas   
 **se almacenan en:**   
@@ -165,7 +165,7 @@ cat /home/mad/id_rsa_mad.pub >> /home/mad/.ssh/authorized_keys
 **Transferir la clave pública SSH a otra máquina en un solo paso:**   
 ssh-keygen; ssh-copy-id user@host; ssh user@host   
    
-**ssh-add    saltar contraseña, conectarse evitando contraseña(funciona)  **   
+**ssh-add    saltar contraseña, conectarse evitando contraseña(funciona)**   
 _ssh-agent en un programa que almacena las claves privadas y las utiliza en cada sesión ssh que establezcamos en la sesión actual, lo ejecutamos y añadimos la clave id_rsa2:_   
 ssh-agent /bin/bash   
 ssh-add ~/.ssh/nuestra_llave_privada   
@@ -455,7 +455,7 @@ chmod +x /etc/profile.d/os-security.sh
    
    
 #############################   
-## conversiones encriptacion##   
+## conversiones encriptacion ##   
 #############################   
 ###  Openssl, llaves publicas   
 **con openssl extraer la llave publica**   

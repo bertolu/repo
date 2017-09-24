@@ -7,5 +7,5 @@ probando
 **colaborando en linea**                      
 en negrita   
 
-# mango#    
+# mango #    
 programa de television   
