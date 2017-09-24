@@ -5,7 +5,7 @@ repositorio multiuso
 probando
 
 **colaborando en linea**                      
-en negrita
+en negrita   
 
-#mango#
-programa de television
+#mango#    
+programa de television   
