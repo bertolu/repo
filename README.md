@@ -9,3 +9,7 @@ en negrita
 
 # mango #    
 programa de television   
+
+#############################
+##  trucos vim    ##
+####################
